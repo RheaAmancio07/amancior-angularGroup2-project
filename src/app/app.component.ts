@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-g2-project';
+  // title = 'angular-g2-project';
+  title = "My first Angular component";
+  appMessage = "";
+
+
+  appEvent(event){
+    this.appMessage = event;
+    // alert('AppComponent event');
+    //alert(event);
+  }
 }
