@@ -14,8 +14,10 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    this.firstEvent.emit('new message');
-  }
+  // onClick() {
+  //   this.firstEvent.emit('new message');
+  // }
+
+  
 
 }
