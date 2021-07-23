@@ -1,12 +1,22 @@
+<h1>Device Details View</h1>
+<div *ngFor="let device of devices">
+    <app-device-details [deviceDetail]="device"></app-device-details>
+</div>
+<br>
+<h1> Add Device</h1>
+<div>
+    <app-template-form (deviceDetail)="newDeviceAdded($event)"></app-template-form>
+</div>
+
+
+
+<!-- Activity 5
 <p>{{title}}</p>
-
-<!-- Activity 5-->
-
 <h1>{{activity5Title}}</h1>
 
 <div *ngFor="let device of devices">
     <app-device-details [deviceDetail]="device"></app-device-details>
-</div>
+</div>-->
 
 <!--Activity 4
 <br>

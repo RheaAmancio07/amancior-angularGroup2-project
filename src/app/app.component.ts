@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter} from '@angular/core';
 import { Device } from './models';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,9 @@ import { Device } from './models';
 })
 export class AppComponent {
 
-  @Output() counterChange = new EventEmitter();
-  
-  title = "My first Angular component";
-  
-  // Activity 5
+  // @Output() counterChange = new EventEmitter();
 
-  activity5Title = "Device Details View";
+  title = "My first Angular component";
 
   devices: Device[] = [
     {
@@ -33,6 +30,19 @@ export class AppComponent {
       serial: "aspire2021"
     }
   ]
+
+  newDeviceAdded(device:Device){
+    console.log(device);
+    this.devices.push(device);
+
+  }
+
+
+
+
+
+  // // Activity 5
+  // activity5Title = "Device Details View";
 
   // //Activity 4
   // counter = 0;
