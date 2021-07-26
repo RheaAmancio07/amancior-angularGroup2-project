@@ -13,8 +13,11 @@ export class AppComponent {
 
   title = "My first Angular component";
 
+  showUpdate:boolean = false;
+
   devices: Device[] = [
     {
+      id: 1,
       name:  "Device01",
       brand: "Samsung",
       model: "Galaxy Book W720NZKB",
@@ -23,6 +26,7 @@ export class AppComponent {
 
     },
     {
+      id: 2,
       name:  "Device02",
       brand: "Acer",
       model: "Aspire",
@@ -30,6 +34,24 @@ export class AppComponent {
       serial: "aspire2021"
     }
   ]
+
+  selectedDevice: Device;
+
+  updateDevice(deviceId:number){
+    this.showUpdate = true;
+    this.selectedDevice = this.devices.find(device => device.id == deviceId)
+    console.log(deviceId + 'app');
+  }
+
+  updateDisplay(updatedDevice:Device){
+    this.showUpdate = false;
+    //console.log(updatedDevice);
+    let index = this.devices.findIndex(device=> device.id == updatedDevice.id)
+    console.log(index);
+    this.devices[index] = updatedDevice;
+    
+    
+  }
 
   newDeviceAdded(device:Device){
     console.log(device);
