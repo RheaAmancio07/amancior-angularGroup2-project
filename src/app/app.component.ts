@@ -8,9 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
   // @Output() counterChange = new EventEmitter();
-
   title = "My first Angular component";
 
   showUpdate:boolean = false;
@@ -49,8 +47,6 @@ export class AppComponent {
     let index = this.devices.findIndex(device=> device.id == updatedDevice.id)
     console.log(index);
     this.devices[index] = updatedDevice;
-    
-    
   }
 
   newDeviceAdded(device:Device){
@@ -58,8 +54,6 @@ export class AppComponent {
     this.devices.push(device);
 
   }
-
-
 
 
 

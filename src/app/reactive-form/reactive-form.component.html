@@ -1,21 +1,32 @@
-<h1>Update Device Info</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
 
-<form [formGroup]="updateForm" (ngSubmit)="updateDevice()">
-    <input formControlName = "id" type = "hidden" id ="id">
-    <label for="name">Device Name: </label>
-    <input formControlName = "name" type = "text" id ="name">
-    <br>
-    <label for="brand">Brand: </label>
-    <input formControlName = "brand" type = "text" id ="brand">
-    <br>
-    <label for="model">Model: </label>
-    <input formControlName = "model" type = "text" id ="model">
-    <br>
-    <label for="year">Year: </label>
-    <input formControlName = "year" type = "text" id ="year">
-    <br>
-    <label for="serial">Serial: </label>
-    <input formControlName = "serial" type = "text" id ="serial">
-    <br>
-    <button type="submit">Submit</button>
-</form>
+    <body>
+        <div class="border border-secondary w-50">
+            <h1 class="text-center">Update Device Info</h1>
+
+            <form [formGroup]="updateForm" (ngSubmit)="updateDevice()" class="form-group mt-5">
+                <input formControlName = "id" type = "hidden" id ="id">
+                <label for="name">Device Name: </label>&nbsp;
+                <input formControlName = "name" type = "text" id ="name">
+                <br>
+                <label for="brand">Brand: </label>&nbsp;&nbsp;
+                <input formControlName = "brand" type = "text" id ="brand" class="ml-5">
+                <br>
+                <label for="model">Model: </label>&nbsp;
+                <input formControlName = "model" type = "text" id ="model" class="ml-5">
+                <br>
+                <label for="year">Year: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input formControlName = "year" type = "text" id ="year" class="ml-5">
+                <br>
+                <label for="serial">Serial: </label>&nbsp;&nbsp;
+                <input formControlName = "serial" type = "text" id ="serial" class="ml-5">
+                <br>
+                <button class=" btn btn-primary " type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

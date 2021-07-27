@@ -3,11 +3,12 @@ div {
     margin-left: 5px;
 }
 
+form {
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
 button {
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: black;
-    background-color: aqua;
-    border-radius: 10%;
+    margin-left: 35%;
+    margin-bottom: 20px;
 }

@@ -1,4 +1,4 @@
-<h1>Device Details View</h1>
+<!--<h1>Device Details View</h1>
 <div *ngIf="!showUpdate">
     <div class="device" *ngFor="let device of devices">
         <app-device-details [deviceDetail]="device" (updateDetail)="updateDevice($event)"></app-device-details>
@@ -9,7 +9,7 @@
     <app-reactive-form [device]="selectedDevice" (update)="updateDisplay($event)"></app-reactive-form>
 </div>
 
-<!--<div>
+<div>
     <h1> Add Device</h1>
     <app-template-form (deviceDetail)="newDeviceAdded($event)"></app-template-form>
 </div>-->
