@@ -52,7 +52,6 @@ export class AppComponent {
   newDeviceAdded(device:Device){
     console.log(device);
     this.devices.push(device);
-
   }
 
 
