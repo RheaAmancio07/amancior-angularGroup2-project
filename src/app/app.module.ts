@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import{ HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { DeviceDetailsComponent } from './device-details/device-details.componen
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DeviceListComponent } from './device-list/device-list.component';
+import { HttpComponent } from './http/http.component';
+
 
 @NgModule({
   declarations: [
@@ -23,13 +26,17 @@ import { DeviceListComponent } from './device-list/device-list.component';
     DeviceDetailsComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    DeviceListComponent
+    DeviceListComponent,
+    HttpComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

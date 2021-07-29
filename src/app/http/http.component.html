@@ -1,0 +1,30 @@
+<!--<p>http works!</p>-->
+<!--<h1>List of Posts</h1>
+<div *ngFor="let post of posts">
+    <h2>Title: {{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <ul>id: {{post.id}}</ul>
+    <ul>userId: {{post.userId}}</ul>
+</div>-->
+
+<div *ngIf="!showDetails">
+    <h1>List of Users</h1>
+    <div *ngFor="let user of users">
+        <h5>{{user.name}}&nbsp; <button (click)="viewDetails(user.id)">View Details</button></h5>
+    </div>
+</div>
+
+
+<div *ngIf="showDetails">
+    <h1>User Details</h1>
+    <div >
+    <h5>{{selectedUser?.name}}</h5>
+    <p>Username: {{selectedUser?.username}}</p>
+    <p>Email: {{selectedUser?.email}}</p>
+    <p>Address: {{selectedUser?.address.street + ", " +selectedUser?.address.suite+ ", " +selectedUser?.address.city+ ", " +selectedUser?.address.zipcode }}</p>
+    <p>Phone: {{selectedUser?.phone}}</p>
+    <p>Website: {{selectedUser?.website}}</p>
+    <p>Company: {{selectedUser?.company.name}}</p>
+    <button (click)="backToUsers()">Back to Users</button>
+</div>
+</div>
